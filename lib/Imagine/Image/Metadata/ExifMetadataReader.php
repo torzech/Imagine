@@ -81,9 +81,9 @@ class ExifMetadataReader extends AbstractMetadataReader
      */
     private function extract($path)
     {
-        if (false === $exifData = @exif_read_data($path, null, true, false)) {
+        // if (false === $exifData = @exif_read_data($path, null, true, false)) {
             return array();
-        }
+        // }
 
         $metadata = array();
         $sources = array('EXIF' => 'exif', 'IFD0' => 'ifd0');
